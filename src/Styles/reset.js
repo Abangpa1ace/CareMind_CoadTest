@@ -29,9 +29,10 @@ const GlobalReset = createGlobalStyle`
   }
 
   a {
+    color: #000000;
     text-decoration: none;
   }
-  
+
   svg {
     font-size: 20px;
   }

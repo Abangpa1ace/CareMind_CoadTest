@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 const theme = {
   widthWeb: '1400px',
-  widthMobile: '720px',
+  widthMobile: '768px',
   gray0: '#F4F4F4',
   gray1: '#B0B0B0',
   gray2: '#636363',
