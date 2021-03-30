@@ -18,6 +18,7 @@ const Main = () => {
         <MainLinkerItem background="#FF91D4">
           <Link to="/1-2">1-2. Font-Size Button</Link>
         </MainLinkerItem>
+        
         <MainLinkerItem background="#7CFFDD" divided>
           <Link to="/2-1" onClick={(e) => e.preventDefault()} >
             2-1. Props Render
