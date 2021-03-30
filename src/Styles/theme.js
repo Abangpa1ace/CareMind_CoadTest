@@ -6,6 +6,7 @@ const theme = {
   gray0: '#F4F4F4',
   gray1: '#B0B0B0',
   gray2: '#636363',
+  boxShadow: '3px 3px 5px 1px #cccccc',
   transition: 'all .3s ease',
 }
 
@@ -17,13 +18,8 @@ export const flexCenter = css`
   align-items: center;
 `;
 
-export const flexBetween = css`
+export const flexCenterStart = css`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const flexAlign = css`
-  display: flex;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
 `;

@@ -55,7 +55,7 @@ const MainLinkerMsg = styled.p`
   padding: 10px;
   background: #ffffff;
   color: #FE3D3D;
-  box-shadow: 3px 3px 5px 1px #cccccc;
+  box-shadow: ${({ theme }) => theme.boxShadow};
   border-radius: 5px;
   font-size: 11px;
   visibility: hidden;

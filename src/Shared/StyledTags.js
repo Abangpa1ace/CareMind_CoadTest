@@ -38,7 +38,7 @@ const StyledButton = styled.button`
     background: ${({ backgroundHov }) => backgroundHov};
     border-color: ${({ borderHov }) => borderHov};
   }
-  border-radius: ${({ radius }) => radius || '10px'};
+  border-radius: ${({ radius }) => radius || '5px'};
   font-size: ${({ fontSize }) => fontSize};
 `;
 
