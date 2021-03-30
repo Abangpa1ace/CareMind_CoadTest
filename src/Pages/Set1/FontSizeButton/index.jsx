@@ -16,7 +16,7 @@ const FontSizeButton = () => {
   const isFontOver = fontSize >= MAX_FONTSIZE;
 
   return (
-    <FontsizeButton>
+    <FontSizeBtnPage>
       <SizeBtnCon>
         {!isFontUnder &&
           <Button
@@ -45,11 +45,11 @@ const FontSizeButton = () => {
           </Button>
         }
       </SizeBtnCon>
-    </FontsizeButton>
+    </FontSizeBtnPage>
   )
 }
 
-const FontsizeButton = styled.main`
+const FontSizeBtnPage = styled.main`
   ${flexCenter};
   height: 100vh;
 `;

@@ -18,11 +18,17 @@ const Main = () => {
         <MainLinkerItem background="#FF91D4">
           <Link to="/1-2">1-2. Font-Size Button</Link>
         </MainLinkerItem>
-        <MainLinkerItem divided>
-          <Link to="/1-1">2-1. Mobile Menu</Link>
+        <MainLinkerItem background="#7CFFDD" divided>
+          <Link to="/2-1" onClick={(e) => e.preventDefault()} >
+            2-1. Props Render
+            <MainLinkerMsg>링크가 없습니다. 디렉토리(혹은 Github) HTML 파일을 참조해주세요!</MainLinkerMsg>
+          </Link>
         </MainLinkerItem>
-        <MainLinkerItem>
-          <Link to="/1-1">2-2. Font-Size Button</Link>
+        <MainLinkerItem background="#7CFFDD">
+          <Link to="/2-2">2-2. Pie Chart</Link>
+        </MainLinkerItem>
+        <MainLinkerItem background="#7CFFDD">
+          <Link to="/2-3">2-3. Redux Login</Link>
         </MainLinkerItem>
       </MainLinker>
     </MainPage>
@@ -36,23 +42,36 @@ const MainPage = styled.main`
 
 const MainLinker = styled.ul`
   ${flexCenter};
-  width: ${({ theme }) => theme.widthWeb};
+  width: 1200px;
   margin: 80px auto 0;
   padding: 20px;
   background: ${({ theme }) => theme.gray0};
   border-radius: 5px;
 `;
 
+const MainLinkerMsg = styled.p`
+  position: absolute;
+  bottom: -50px;
+  padding: 10px;
+  background: #ffffff;
+  color: #FE3D3D;
+  box-shadow: 3px 3px 5px 1px #cccccc;
+  border-radius: 5px;
+  font-size: 11px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: ${({ theme }) => theme.transition};
+  z-index: 1;
+`;
+
 const MainLinkerItem = styled.li`
+  position: relative;
   width: 16%;
   height: 40px;
   margin: ${({ divided }) => divided ? "0 10px 0 50px" : "0 10px"};
   background: ${({ background, theme }) => background || theme.gray1};
   border-radius: 5px;
-
-  &:hover {
-    opacity: 0.8;
-  }
 
   a {
     display: inline-block;
@@ -60,6 +79,16 @@ const MainLinkerItem = styled.li`
     height: 100%;
     text-align: center;
     line-height: 40px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  
+    ${MainLinkerMsg} {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 `;
 
